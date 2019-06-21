@@ -1,7 +1,12 @@
 import './style.css'
-function hello(){
-    let element=document.createElement('div');
+import headerImg from './headerImg.jpg';
+function createEl(){
+    let element=document.createElement('div'),
+        img=new Image();
+    img.src=headerImg; 
+    element.appendChild(img);
     element.classList.add('personInfo');
-    document.body.appendChild(element);
+    return element;
 }
-hello();
+
+document.body.appendChild(createEl());
