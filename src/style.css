@@ -1,9 +1,23 @@
+@font-face {
+   font-family: 'paopao';
+   src:url('./paopao.ttf') format('ttf');
+}
 body{
     background:red;
 }
 .personInfo{
-    width:100px;
+    width:300px;
     height:100px;
     margin:100px auto;
+    color:#ffffff;
+    font-size: 40px;
+}
+.personInfo p:first-of-type{
+    font-family: 'paopao';
+}
+.personInfo image{
+    width:50px;
+    height:50px;
+    margin:0 auto 10px;
     background: url('./headerImg.jpg');
 }
