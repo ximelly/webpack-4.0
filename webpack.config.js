@@ -21,7 +21,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   output: {
-    filename: '[name].bundle-[hash].js',
+    filename: '[name]-[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
