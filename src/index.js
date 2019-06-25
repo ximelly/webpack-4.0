@@ -1,6 +1,5 @@
 import './style.css';
 import headerImg from './headerImg.jpg';
-import {print} from './print.js';
 
 if (process.env.NODE_ENV !== 'production') {
   console.log('Looks like we are in development mode!');
@@ -22,7 +21,10 @@ function createEl(type,source,fun){
             el.innerHTML=source?source:"";
     }
     if(typeof fun =='function'){
-        el.onclick=fun;
+        el.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
+          var fun = module.print;
+          fun();
+        });
     }
     return el;
 }
