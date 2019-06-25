@@ -2,6 +2,10 @@ import './style.css';
 import headerImg from './headerImg.jpg';
 import {print} from './print.js';
 
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
+
 function createEl(type,source,fun){
     let el;
     switch(type){
