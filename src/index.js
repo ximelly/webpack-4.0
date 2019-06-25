@@ -1,6 +1,6 @@
 import './style.css';
 import headerImg from './headerImg.jpg';
-import {print,sayHai} from './print.js';
+import {print} from './print.js';
 
 function createEl(type,source,fun){
     let el;
@@ -23,7 +23,7 @@ function createEl(type,source,fun){
     return el;
 }
 
-document.body.appendChild(createEl('p','这是一段文本',sayHai));
+document.body.appendChild(createEl('p','这是一段文本',print));
 let element=createEl('p','这是第二段文本',print);
 document.body.appendChild(element);
 document.body.appendChild(createEl('img',headerImg));
